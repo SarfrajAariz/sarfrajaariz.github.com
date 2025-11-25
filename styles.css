@@ -205,19 +205,28 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,17
   background: none !important;
 }
 
-/* Set actual background image */
-.about {
-  background-image: url("https://sarfrajaariz.github.io/aboutbackground.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  position: relative !important;
-  color: white !important;
-  padding: 60px 0 !important;
-  min-height: 450px !important;
+/* PREMIUM ABOUT SECTION BACKGROUND */
+.section.about,
+.about.section,
+#about {
+  background: none !important;
 }
 
-/* Dark overlay so text is readable */
+.about {
+  background-image: url("https://raw.githubusercontent.com/SarfrajAariz/sarfrajaariz.github.com/main/aboutbackground.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+
+  position: relative !important;
+  color: white !important;
+  padding: 70px 0 !important;
+  min-height: 520px !important;
+  border-radius: 0 0 40px 40px;
+}
+
+/* premium overlay */
 .about::before {
   content: "";
   position: absolute;
@@ -225,11 +234,17 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,17
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.35)
+  );
   z-index: 0;
 }
 
+/* keep text above overlay */
 .about * {
   position: relative;
   z-index: 1;
 }
+
