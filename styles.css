@@ -1,1 +1,127 @@
+:root{
+  --bottle:#062a22;
+  --bottle-2:#041e18;
+  --gold:#d4af37;
+  --muted:#9fb59b;
+  --card:#0f2b24;
+  --cream:#f4efe6;
 
+  --radius:12px;
+  --glass: rgba(255,255,255,0.03);
+  --max-width:1100px;
+
+  /* Replace with your GitHub raw hero image if you want:
+     --hero-image: url("https://raw.githubusercontent.com/<user>/<repo>/main/assets/hero.png");
+     The page sets a default subtle gradient. */
+  --hero-image: linear-gradient(135deg, rgba(4,20,18,0.6), rgba(2,12,10,0.6));
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,var(--bottle), #041915 140%);color:var(--cream);-webkit-font-smoothing:antialiased;line-height:1.6}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:2.25rem 1rem}
+.wrap.small{max-width:900px;padding:2rem 1rem}
+a{color:inherit}
+
+/* skip link */
+.skip{position:absolute;left:-999px;top:auto;height:1px;overflow:hidden}
+.skip:focus{left:1rem;top:1rem;background:#fff;color:#07281a;padding:.45rem .6rem;border-radius:6px}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;gap:0.8rem;align-items:center}
+.logo{display:block;border-radius:10px}
+.brand-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--cream)}
+.brand-sub{display:block;font-size:0.78rem;color:var(--muted)}
+
+.nav-links{display:flex;gap:1rem;align-items:center;list-style:none;margin:0;padding:0}
+.nav-links a{padding:.45rem .6rem;border-radius:8px;text-decoration:none;color:rgba(255,255,255,0.95);font-weight:600}
+.nav-links a:focus, .nav-links a:hover{background:var(--glass);outline:none}
+
+/* mobile toggle */
+.nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.04);padding:.45rem;border-radius:8px;color:var(--cream)}
+
+/* HERO */
+.hero{position:relative;min-height:72vh;display:flex;flex-direction:column;justify-content:center;background-image:var(--hero-image);background-size:cover;background-position:center;overflow:hidden}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,8,6,0.35), rgba(2,6,5,0.6));z-index:0}
+.hero .wrap{position:relative;z-index:2}
+.hero-content{text-align:center;max-width:920px;margin:0 auto;padding:2rem 1rem;color:var(--cream)}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.6rem;margin:0 0 .6rem;color:#f7f9f7}
+.lead{font-size:1.05rem;color:rgba(255,255,255,0.9);margin-bottom:1rem}
+.hero-note{margin-top:1rem;color:rgba(255,255,255,0.7)}
+
+/* buttons */
+.btn{display:inline-block;padding:.65rem 1rem;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--gold);color:#061712;box-shadow:0 8px 28px rgba(0,0,0,0.45)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--cream)}
+
+/* SECTIONS */
+.section{padding:3.25rem 0}
+.section h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:2rem;margin:0 0 1rem;text-align:center}
+.section p{color:rgba(255,255,255,0.92)}
+
+/* ABOUT grid */
+.section-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center}
+.media-col img{width:100%;border-radius:12px;object-fit:cover;box-shadow:0 12px 40px rgba(0,0,0,0.65)}
+.bullets{padding-left:1.05rem;margin-top:.6rem;color:var(--muted)}
+
+/* PROMISE grid */
+.promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.25rem}
+.promise-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.25rem;border-radius:10px;text-align:center;color:var(--cream);font-weight:700}
+
+/* FLAVOURS */
+.flavour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.flavour-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:1rem;border-radius:12px;text-align:center;color:var(--cream);box-shadow:0 10px 30px rgba(0,0,0,0.45)}
+.flavour-card img{width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:.6rem}
+
+/* WHY list */
+.why-list{list-style:none;padding:0;margin:0;max-width:720px;margin:0 auto}
+.why-list li{padding:.8rem;border-bottom:1px solid rgba(255,255,255,0.03);color:var(--cream)}
+
+/* FOUNDER */
+.founder-grid{display:grid;grid-template-columns:280px 1fr;gap:1.25rem;align-items:center}
+.founder-photo img{width:100%;border-radius:12px;object-fit:cover;box-shadow:0 12px 40px rgba(0,0,0,0.5)}
+.founder-name{color:var(--gold);font-weight:700;margin-top:.6rem}
+
+/* CONNECT / CONTACT */
+.contact-form{display:grid;gap:.7rem}
+.contact-form input, .contact-form textarea{padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.02);color:var(--cream)}
+.form-actions{display:flex;gap:.6rem;align-items:center}
+
+/* footer */
+.site-footer{text-align:center;padding:1.2rem 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+/* small helpers */
+.muted{color:var(--muted)}
+.small{max-width:880px;margin:0 auto}
+
+/* NAV mobile behavior */
+@media (max-width:980px){
+  .section-grid{grid-template-columns:1fr}
+  .promise-grid{grid-template-columns:repeat(2,1fr)}
+  .flavour-grid{grid-template-columns:repeat(2,1fr)}
+  .founder-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .nav-links{display:none;position:absolute;right:1rem;top:68px;background:rgba(2,8,6,0.7);padding:.6rem;border-radius:10px;flex-direction:column;gap:.4rem}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+}
+
+/* small screens */
+@media (max-width:560px){
+  .flavour-grid{grid-template-columns:1fr}
+  .promise-grid{grid-template-columns:1fr}
+  .hero h1{font-size:1.6rem}
+  .wrap{padding:1rem}
+}
+
+/* REVEAL animations */
+.fade-up{transform:translateY(12px);opacity:0;transition:opacity .6s ease, transform .6s ease}
+.fade-up.in{transform:none;opacity:1}
+.delay-1{transition-delay:.12s}
+.delay-2{transition-delay:.24s}
+.delay-3{transition-delay:.36s}
+
+/* focus styles for keyboard users */
+a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,175,55,0.18);outline-offset:3px}
