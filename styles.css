@@ -134,13 +134,14 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,17
 .founder-photo {
   width: 180px;
   height: auto;
-  border-radius: 50%;       /* clean round crop */
+  border-radius: 20px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 2rem auto;
-  border: 4px solid #d4af37; /* gold ring */
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid #d4af37;
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
+
 /* Center the founder heading */
 #founder h2 {
   text-align: center;
