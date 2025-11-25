@@ -5,173 +5,273 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AsSip — One sip of Assam | Premium Assam Tea</title>
   <meta name="description" content="AsSip — premium, handpicked Assam tea. Small-batch, organic & artisanal blends." />
+  <!-- Open Graph (social) -->
+  <meta property="og:title" content="AsSip — One Sip of Assam" />
+  <meta property="og:description" content="AsSip — premium, handpicked Assam tea." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-share.png" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    /* Minimal styles for cart & modal (kept small so it fits your design) */
-    .buy-btn{background:#0b6b3a;color:white;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
-    .cart-count{background:#e63b1a;color:white;padding:2px 7px;border-radius:12px;margin-left:8px;font-size:12px}
-    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;z-index:60}
-    .modal{background:#fff;width:92%;max-width:480px;border-radius:12px;padding:18px}
-    .qty-option{border:1px solid #ddd;padding:12px;border-radius:10px;cursor:pointer;flex:1;text-align:center}
-    .qty-option.selected{border-color:#0b6b3a}
-    .cart-drawer{position:fixed;right:18px;bottom:18px;background:#fff;border-radius:12px;padding:12px;box-shadow:0 18px 40px rgba(0,0,0,0.12);min-width:300px;z-index:70;display:none}
-  </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- HEADER / HERO (unchanged) -->
+  <!-- HEADER / HERO -->
+  <!-- To use your GitHub-hosted hero image set inline style:
+       style="--hero-image: url('https://raw.githubusercontent.com/<user>/<repo>/main/assets/hero.png');"
+  -->
   <header class="hero" id="top" style="--hero-image: linear-gradient(135deg, rgba(4,20,18,0.6), rgba(2,12,10,0.6));">
+    <div class="hero-overlay" aria-hidden="true"></div>
+
     <div class="nav wrap" role="navigation" aria-label="Main navigation">
-      <div class="brand">
-        <a href="/" aria-label="AsSip homepage"><img class="site-logo" src="logo.jpeg" alt="AsSip logo"></a>
-        <div class="brand-text"><span class="brand-name">AsSip</span><span class="brand-sub">One sip of Assam — চাহ (Sah)</span></div>
-      </div>
-      <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
-        <a href="/auth.html" style="text-decoration:none;color:#0b6b3a">Account</a>
-        <button id="openCart" style="background:transparent;border:1px solid #ddd;padding:8px 12px;border-radius:8px;cursor:pointer">Cart <span id="cartCount" class="cart-count">0</span></button>
-      </div>
+     <div class="brand">
+  <a href="/" aria-label="AsSip homepage">
+    <img class="site-logo" src="logo.jpeg" alt="AsSip logo">
+  </a>
+  <div class="brand-text">
+    <span class="brand-name">AsSip</span>
+    <span class="brand-sub">One sip of Assam — চাহ (Sah)</span>
+  </div>
+</div>
+
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <svg width="20" height="14" viewBox="0 0 20 14"><rect width="20" height="2" rx="1" fill="currentColor"/><rect y="6" width="20" height="2" rx="1" fill="currentColor"/><rect y="12" width="20" height="2" rx="1" fill="currentColor"/></svg>
+      </button>
+
+      <ul id="primaryNav" class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#promise">Our Promise</a></li>
+        <li role="none"><a role="menuitem" href="#flavours">Flavours</a></li>
+        <li role="none"><a role="menuitem" href="#why">Why Buy</a></li>
+        <li role="none"><a role="menuitem" href="#founder">Founder</a></li>
+        <li role="none"><a role="menuitem" href="#connect">Let's Connect</a></li>
+      </ul>
     </div>
+
     <div class="hero-content wrap" aria-labelledby="heroTitle">
-      <h1 id="heroTitle">AsSip — One Sip of Assam</h1>
-      <p class="lead">Handpicked • Organic • Small-batch • Full-bodied Assam flavour</p>
-      <div class="hero-ctas"><a class="btn primary" href="#flavours">Explore Flavours</a></div>
+      <h1 id="heroTitle" class="fade-up">AsSip — One Sip of Assam</h1>
+      <p class="lead fade-up delay-1">Handpicked • Organic • Small-batch • Full-bodied Assam flavour</p>
+
+      <div class="hero-ctas fade-up delay-2">
+        <a class="btn primary" href="#flavours">Explore Flavours</a>
+        <a class="btn ghost" href="#connect">Let's Connect</a>
+      </div>
+
+      <p class="hero-note fade-up delay-3">Made with ❤️ in Assam</p>
     </div>
   </header>
 
+  <!-- MAIN -->
   <main id="main">
 
-    <!-- ABOUT (unchanged) -->
+    <!-- ABOUT -->
     <section id="about" class="section about">
       <div class="wrap">
         <div class="section-grid">
           <div class="text-col">
             <h2>About AsSip</h2>
-            <p>AsSip is a tribute to the land where tea is not just grown, but lived. ...</p>
+            <p>AsSip is a tribute to the land where tea is not just grown, but lived.
+Born in Assam, the home of the world’s finest tea, AsSip was created with a simple purpose — to share the true essence of Assam with everyone, without compromise.
+
+We believe tea should be pure, honest and untouched by anything unnecessary.
+That’s why every batch of AsSip is crafted with care, using natural ingredients and traditional methods that preserve the richness of the leaf. No chemicals, no artificial additions — just the authentic depth and character that Assam tea is known for.
+
+Our promise is simple:
+To deliver tea that feels genuine, premium, and connected to its roots.
+
+Every jar we pack carries the warmth of our culture, the dedication of our growers, and the timeless spirit of Assam. With each sip, you taste not just tea, but the story of a land that has perfected it over generations.
+
+AsSip — One Sip of Assam.</p>
+            <ul class="bullets">
+              <li>Single-origin Assam</li>
+              <li>Organic & small-batch</li>
+              <li>Care for growers & the planet</li>
+            </ul>
           </div>
-          <figure class="media-col" aria-hidden="true"><img src="jar.png" alt="Tea leaves in jar" class="about-photo"></figure>
+
+          <figure class="media-col" aria-hidden="true">
+            <!-- Replace src with your GitHub raw image when ready -->
+            <img src="https://raw.githubusercontent.com/SarfrajAariz/sarfrajaariz.github.com/main/jar.png"
+     alt="Tea leaves in jar"
+     class="about-photo">
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- FLAVOURS with Buy buttons -->
+    <!-- PROMISE -->
+    <section id="promise" class="section promise">
+      <div class="wrap">
+        <h2>Our Promise</h2>
+        <div class="promise-grid">
+          <div class="promise-card">Pure & Organic</div>
+          <div class="promise-card">Handpicked Quality</div>
+          <div class="promise-card">Small-Batch Care</div>
+          <div class="promise-card">Fair & Sustainable</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAVOURS -->
     <section id="flavours" class="section flavours">
       <div class="wrap">
         <h2>Explore Our Flavours</h2>
-        <div class="flavour-grid" id="productsGrid">
-          <!-- Products will be rendered by JS to keep markup clean -->
+        <div class="flavour-grid">
+          <article class="flavour-card" tabindex="0">
+            <img src="https://raw.githubusercontent.com/SarfrajAariz/sarfrajaariz.github.com/main/classic.jpg"
+     alt="Classic Assam"
+     class="flavour-img">
+
+            <h3>AsSip Classic Assam</h3>
+            <p>Bold, malty, perfect for milk or straight in the morning.</p>
+          </article>
+
+          <article class="flavour-card" tabindex="0">
+           <img src="https://raw.githubusercontent.com/SarfrajAariz/sarfrajaariz.github.com/main/tippy.jpg"
+     alt="Ginger Spark"
+     class="flavour-img">
+
+            <h3>AsSip Ginger Spark</h3>
+            <p>Lights up your senses with fresh, natural ginger heat.</p>
+          </article>
+          
+          <article class="flavour-card" tabindex="0">
+            <img src="https://raw.githubusercontent.com/SarfrajAariz/sarfrajaariz.github.com/main/elaichi.jpg"
+     alt="Elaichi Bliss"
+     class="flavour-img">
+
+            <h3>AsSip Elaichi Bliss</h3>
+            <p>Pure cardamom aroma that lifts your mood with every sip.</p>
+          </article>
+
+          <article class="flavour-card" tabindex="0">
+            <img src="https://raw.githubusercontent.com/SarfrajAariz/sarfrajaariz.github.com/main/masala.jpg"
+     alt="Masala Blend"
+     class="flavour-img">
+
+            <h3>AsSip Masala Blend</h3>
+            <p>Traditional spices blended with robust Assam leaves.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- CONNECT etc (unchanged) -->
+    <!-- WHY BUY -->
+    <section id="why" class="section why">
+      <div class="wrap small">
+        <h2>Why Buy From Us?</h2>
+        <ul class="why-list">
+          <li>Authentic Assam origin — taste the region</li>
+          <li>No chemicals, no artificial flavouring</li>
+          <li>Packaging that preserves flavour</li>
+          <li>Direct supply chain — fair to growers</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder" class="section founder">
+      <div class="wrap founder-grid">
+        <figure class="founder-photo" aria-hidden="true">
+        <img src="https://raw.githubusercontent.com/SarfrajAariz/sarfrajaariz.github.com/main/founder.jpeg"
+     alt="Founder photo"
+     class="founder-photo">
+        </figure>
+
+        <div class="founder-text">
+          <h2>From The Founder & CEO</h2>
+          <p>“Growing up in Assam, tea was never just a drink for me — it was a feeling, a connection to our land and our people. I always wanted to serve the true taste and essence of rich Assam tea, without chemicals, without artificial flavours — only pure, honest tea the way it’s meant to be.
+With AsSip, that dream has finally taken shape. Every blend we create is handpicked, crafted with care, and stays true to the natural goodness of Assam.
+Thank you for choosing AsSip — one sip, and you become a part of our story.”</p>
+          <p class="founder-name">— Md Sarfraj Ali, Founder & CEO</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
     <section id="connect" class="section connect">
       <div class="wrap small">
         <h2>Let's Connect</h2>
         <p>Questions, orders, wholesale or export inquiries — drop a message.</p>
+
+        <!-- Contact form: mailto fallback. For production, sign up at https://formspree.io and replace the form's action with your Formspree endpoint -->
+        <form id="contactForm" class="contact-form" action="mailto:hello@yoursite.com" method="get" enctype="text/plain">
+          <label>
+            Name
+            <input name="Name" type="text" required>
+          </label>
+
+          <label>
+            Email or WhatsApp
+            <input name="Contact" type="text" required>
+          </label>
+
+          <label>
+            Message / Order details
+            <textarea name="Message" rows="5" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send</button>
+            <small class="muted">or email: <a href="mailto:sarfrajali6001@gmail.com">sarfrajali6001@gmail.com</a></small>
+          </div>
+        </form>
+
+        <div class="connect-info">
+          <p><strong>Location:</strong> Mathurapur, Assam, India</p>
+          <p class="muted">Instagram (@assip_tea) • WhatsApp (+91 7086415656)</p>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer"><div class="wrap small"><p>© <span id="year"></span> AsSip — All rights reserved</p></div></footer>
-
-  <!-- Modal for product size/qty -->
-  <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div><div id="modalTitle" style="font-weight:800">Product</div><div id="modalDesc" class="small"></div></div>
-        <button id="modalClose" style="background:#777;color:#fff;border:none;padding:8px;border-radius:8px">Close</button>
-      </div>
-      <div style="margin-top:12px;font-weight:700">Choose jar size</div>
-      <div style="display:flex;gap:12px;margin-top:8px" id="sizeOptions"></div>
-      <div style="margin-top:12px">Quantity <input id="itemQty" type="number" value="1" min="1" style="width:80px;padding:8px;margin-left:8px;border-radius:8px;border:1px solid #ddd"></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px"><div id="modalTotal" style="font-weight:800">Total: ₹0</div><div><button id="addToCartBtn" class="buy-btn">Add to cart</button></div></div>
+  <footer class="site-footer">
+    <div class="wrap small">
+      <p>© <span id="year"></span> AsSip — All rights reserved</p>
+      <p class="muted">Made with ❤️ by Team AsSip</p>
     </div>
-  </div>
-
-  <!-- Cart drawer -->
-  <div id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="false">
-    <div style="display:flex;justify-content:space-between;align-items:center"><strong>Your Cart</strong><button id="closeCartSmall" style="background:transparent;border:0;cursor:pointer">Close</button></div>
-    <div id="cartItems" style="margin-top:10px;max-height:260px;overflow:auto"></div>
-    <div style="margin-top:10px"><div style="display:flex;justify-content:space-between;font-weight:700"><div>Subtotal</div> <div id="cartSubtotal">₹0</div></div><a id="goToCheckout" href="checkout.html" style="display:inline-block;margin-top:10px;background:#0b6b3a;color:white;padding:10px 12px;border-radius:8px;text-decoration:none">Go to Checkout</a></div>
-  </div>
+  </footer>
 
   <script>
-    // small utilities
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Products data (match your flavour cards)
-    const products = [
-      { id: 'sip-classic', name: 'AsSip Classic Assam', desc: 'Bold, malty, perfect for milk or straight in the morning.', price100:199, price250:299 },
-      { id: 'sip-ginger', name: 'AsSip Ginger Spark', desc: 'Lights up your senses with fresh, natural ginger heat.', price100:199, price250:299 },
-      { id: 'sip-elaichi', name: 'AsSip Elaichi Bliss', desc: 'Pure cardamom aroma that lifts your mood with every sip.', price100:199, price250:299 },
-      { id: 'sip-masala', name: 'AsSip Masala Blend', desc: 'Traditional spices blended with robust Assam leaves.', price100:199, price250:299 }
-    ];
-
-    const grid = document.getElementById('productsGrid');
-    products.forEach(p =>{
-      const el = document.createElement('article'); el.className='flavour-card';
-      el.innerHTML = `\n        <img src="${p.id==='sip-elaichi'? 'elaichi.jpg' : p.id==='sip-ginger'? 'tippy.jpg' : p.id==='sip-masala'? 'masala.jpg' : 'classic.jpg'}" alt="${p.name}" class="flavour-img">\n        <h3>${p.name}</h3><p>${p.desc}</p><div style=\"margin-top:10px;display:flex;gap:10px\"> <button class='buy-btn' data-id='${p.id}'>Buy</button></div>`;
-      grid.appendChild(el);
+    // smooth scroll for internal anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'});
+          // close mobile nav if open
+          const nav = document.getElementById('primaryNav');
+          nav && nav.classList.remove('open');
+          document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+        }
+      });
     });
 
-    // Modal logic
-    const modalBackdrop = document.getElementById('modalBackdrop');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-    const sizeOptionsEl = document.getElementById('sizeOptions');
-    const itemQty = document.getElementById('itemQty');
-    const modalTotal = document.getElementById('modalTotal');
-    const addToCartBtn = document.getElementById('addToCartBtn');
-    const modalClose = document.getElementById('modalClose');
+    // mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    navToggle && navToggle.addEventListener('click', ()=>{
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      primaryNav.classList.toggle('open');
+    });
 
-    let selectedProduct = null, selectedSize=100, selectedPrice=199;
-
-    function openModal(prodId){
-      selectedProduct = products.find(x=>x.id===prodId);
-      modalTitle.textContent = selectedProduct.name;
-      modalDesc.textContent = selectedProduct.desc;
-      itemQty.value = 1;
-      sizeOptionsEl.innerHTML = '';
-      const sizes = [{s:100,p:selectedProduct.price100},{s:250,p:selectedProduct.price250}];
-      sizes.forEach(sz=>{ const d = document.createElement('div'); d.className='qty-option'; d.dataset.size=sz.s; d.dataset.price=sz.p; d.innerHTML = `${sz.s} g<br><small>₹${sz.p}</small>`; d.addEventListener('click', ()=>{ Array.from(sizeOptionsEl.children).forEach(c=>c.classList.remove('selected')); d.classList.add('selected'); selectedSize = Number(d.dataset.size); selectedPrice = Number(d.dataset.price); updateModalTotal(); }); sizeOptionsEl.appendChild(d); });
-      sizeOptionsEl.firstChild.classList.add('selected'); selectedSize = Number(sizeOptionsEl.firstChild.dataset.size); selectedPrice = Number(sizeOptionsEl.firstChild.dataset.price);
-      updateModalTotal(); modalBackdrop.style.display='flex'; modalBackdrop.setAttribute('aria-hidden','false');
-    }
-    function updateModalTotal(){ const q = Number(itemQty.value)||1; modalTotal.textContent = `Total: ₹${selectedPrice*q}`; }
-    itemQty.addEventListener('input', updateModalTotal);
-    modalClose.addEventListener('click', ()=>{ modalBackdrop.style.display='none'; modalBackdrop.setAttribute('aria-hidden','true'); });
-
-    document.querySelectorAll('.buy-btn').forEach(b=>b.addEventListener('click', e=>openModal(e.currentTarget.dataset.id)));
-
-    // Cart logic (localStorage)
-    function getCart(){ return JSON.parse(localStorage.getItem('assip_cart')||'[]'); }
-    function saveCart(c){ localStorage.setItem('assip_cart', JSON.stringify(c)); renderCartCount(); }
-    function addToCart(){ const qty = Math.max(1, Number(itemQty.value)||1); const cart = getCart(); const existing = cart.find(i=>i.id===selectedProduct.id && i.size===selectedSize); if(existing) existing.qty += qty; else cart.push({ id:selectedProduct.id, name:selectedProduct.name, size:selectedSize, unitPrice:selectedPrice, qty:qty }); saveCart(cart); modalBackdrop.style.display='none'; alert('Added to cart ✅'); }
-    addToCartBtn.addEventListener('click', addToCart);
-
-    function renderCartCount(){ const cart = getCart(); const totalItems = cart.reduce((s,i)=>s+i.qty,0); document.getElementById('cartCount').textContent = totalItems; }
-    function renderCartDrawer(){ const cart = getCart(); const cartItemsEl = document.getElementById('cartItems'); cartItemsEl.innerHTML=''; if(cart.length===0){ cartItemsEl.innerHTML='<div class="small">Your cart is empty.</div>'; document.getElementById('cartSubtotal').textContent='₹0'; return; } let subtotal=0; cart.forEach((it,idx)=>{ const itemTotal = it.unitPrice*it.qty; subtotal+=itemTotal; const row = document.createElement('div'); row.style.display='flex'; row.style.justifyContent='space-between'; row.style.padding='8px 0'; row.innerHTML = `<div><strong>${it.name}</strong><div class="small">${it.size} g • ${it.qty} pcs</div></div><div style="text-align:right"><div><strong>₹${itemTotal}</strong></div><div style="margin-top:8px"><button data-idx='${idx}' class='inc' style='margin-right:6px'>+</button><button data-idx='${idx}' class='dec'>-</button><button data-idx='${idx}' class='rem' style='margin-left:8px;color:#b33'>Remove</button></div></div>`; cartItemsEl.appendChild(row); }); document.getElementById('cartSubtotal').textContent = `₹${subtotal}`; cartItemsEl.querySelectorAll('.inc').forEach(b=>b.addEventListener('click', e=>{ const i=Number(e.currentTarget.dataset.idx); const c=getCart(); c[i].qty+=1; saveCart(c); renderCartDrawer(); })); cartItemsEl.querySelectorAll('.dec').forEach(b=>b.addEventListener('click', e=>{ const i=Number(e.currentTarget.dataset.idx); const c=getCart(); if(c[i].qty>1) c[i].qty-=1; else c.splice(i,1); saveCart(c); renderCartDrawer(); })); cartItemsEl.querySelectorAll('.rem').forEach(b=>b.addEventListener('click', e=>{ const i=Number(e.currentTarget.dataset.idx); const c=getCart(); c.splice(i,1); saveCart(c); renderCartDrawer(); })); }
-
-    document.getElementById('openCart').addEventListener('click', ()=>{ renderCartDrawer(); document.getElementById('cartDrawer').style.display='block'; });
-    document.getElementById('closeCartSmall').addEventListener('click', ()=>document.getElementById('cartDrawer').style.display='none');
-
-    renderCartCount();
-
-    // ===== Firebase config (use your project's config) =====
-    const firebaseConfig = {
-      apiKey: "AIzaSyAUZmRz36SioY54OEIr_DpeCpvJsBMSWec",
-      authDomain: "assip-29f4e.firebaseapp.com",
-      projectId: "assip-29f4e",
-      storageBucket: "assip-29f4e.appspot.com",
-      messagingSenderId: "1025217536664",
-      appId: "1:1025217536664:web:c8a39df26959ef9ef626ed",
-      measurementId: "G-N4MWTTQ7Q2"
-    };
-
-    // Save the updated index locally in canvas; next step: I can give you instructions to replace your GitHub index.html with this file.
+    // small reveal animations (CSS classes added on load)
+    window.addEventListener('load', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{
+        el.style.transitionDelay = (i * 120) + 'ms';
+        el.classList.add('in');
+      });
+      document.querySelectorAll('.delay-1').forEach(el=>el.classList.add('in'));
+      document.querySelectorAll('.delay-2').forEach(el=>el.classList.add('in'));
+      document.querySelectorAll('.delay-3').forEach(el=>el.classList.add('in'));
+    });
   </script>
 </body>
 </html>
