@@ -198,7 +198,14 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,17
   position: relative;
   z-index: 1;
 }
-/* ABOUT SECTION BACKGROUND IMAGE */
+/* FULL FIX: Remove any background blocking the About section */
+.section.about, 
+.about.section, 
+#about {
+  background: none !important;
+}
+
+/* Set actual background image */
 .about {
   background-image: url("https://sarfrajaariz.github.io/aboutbackground.jpg") !important;
   background-size: cover !important;
@@ -207,9 +214,10 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,17
   position: relative !important;
   color: white !important;
   padding: 60px 0 !important;
+  min-height: 450px !important;
 }
 
-/* Dark overlay so text stays readable */
+/* Dark overlay so text is readable */
 .about::before {
   content: "";
   position: absolute;
