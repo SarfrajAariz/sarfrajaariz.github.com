@@ -20,25 +20,47 @@
   <!-- To use your GitHub-hosted hero image set inline style:
        style="--hero-image: url('https://raw.githubusercontent.com/<user>/<repo>/main/assets/hero.png');"
   -->
-<header class="hero" style="background-image: url('/mnt/data/Screenshot (15).png');">
-    <div class="overlay"></div>
+  <header class="hero" id="top" style="--hero-image: linear-gradient(135deg, rgba(4,20,18,0.6), rgba(2,12,10,0.6));">
+    <div class="hero-overlay" aria-hidden="true"></div>
 
-    <nav class="nav">
-      <div class="logo">AsSip</div>
-      <ul class="menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#flavours">Flavours</a></li>
-        <li><a href="#connect">Connect</a></li>
+    <div class="nav wrap" role="navigation" aria-label="Main navigation">
+     <div class="brand">
+  <a href="/" aria-label="AsSip homepage">
+    <img class="site-logo" src="logo.jpeg" alt="AsSip logo">
+  </a>
+  <div class="brand-text">
+    <span class="brand-name">AsSip</span>
+    <span class="brand-sub">One sip of Assam — চাহ (Sah)</span>
+  </div>
+</div>
+
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <svg width="20" height="14" viewBox="0 0 20 14"><rect width="20" height="2" rx="1" fill="currentColor"/><rect y="6" width="20" height="2" rx="1" fill="currentColor"/><rect y="12" width="20" height="2" rx="1" fill="currentColor"/></svg>
+      </button>
+
+      <ul id="primaryNav" class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#promise">Our Promise</a></li>
+        <li role="none"><a role="menuitem" href="#flavours">Flavours</a></li>
+        <li role="none"><a role="menuitem" href="#why">Why Buy</a></li>
+        <li role="none"><a role="menuitem" href="#founder">Founder</a></li>
+        <li role="none"><a role="menuitem" href="#connect">Let's Connect</a></li>
       </ul>
-    </nav>
-
-    <div class="hero-content">
-      <h1>AsSip — From Assam With Love</h1>
-      <p>Pure • Handpicked • Premium Assam Tea</p>
-      <a href="#flavours" class="btn">Explore Our Flavours</a>
     </div>
-</header>
 
+    <div class="hero-content wrap" aria-labelledby="heroTitle">
+      <h1 id="heroTitle" class="fade-up">AsSip — One Sip of Assam</h1>
+      <p class="lead fade-up delay-1">Handpicked • Organic • Small-batch • Full-bodied Assam flavour</p>
+
+      <div class="hero-ctas fade-up delay-2">
+        <a class="btn primary" href="#flavours">Explore Flavours</a>
+        <a class="btn ghost" href="#connect">Let's Connect</a>
+      </div>
+
+      <p class="hero-note fade-up delay-3">Made with ❤️ in Assam</p>
+    </div>
+  </header>
 
   <!-- MAIN -->
   <main id="main">
