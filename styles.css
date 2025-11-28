@@ -80,10 +80,26 @@ a{color:inherit}
 .why-list{list-style:none;padding:0;margin:0;max-width:720px;margin:0 auto}
 .why-list li{padding:.8rem;border-bottom:1px solid rgba(255,255,255,0.03);color:var(--cream)}
 
-/* FOUNDER */
-.founder-grid{display:grid;grid-template-columns:280px 1fr;gap:1.25rem;align-items:center}
-.founder-photo img{width:100%;border-radius:12px;object-fit:cover;box-shadow:0 12px 40px rgba(0,0,0,0.5)}
-.founder-name{color:var(--gold);font-weight:700;margin-top:.6rem}
+.founder-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:1.5rem;
+  align-items:flex-start;
+}
+.founder-name{
+  color:var(--gold);
+  font-weight:700;
+  margin-top:.6rem;
+}
+#founder h2 {
+  text-align:center;
+  width:100%;
+  margin-bottom:1.5rem;
+}
+.founder-col{
+  font-size:0.98rem;
+}
+
 
 /* CONNECT / CONTACT */
 .contact-form{display:grid;gap:.7rem}
@@ -130,27 +146,6 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,17
   height:55px;
   border-radius:8px;
   object-fit:cover;
-}
-.founder-photo {
-  width: 200px;
-  border-radius: 18px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-
-  /* Premium gold frame */
-  padding: 6px;
-  background: linear-gradient(135deg, #D4AF37, #F7D774, #C9A227);
-  border-radius: 22px;
-
-  /* Photo card shadow */
-  box-shadow: 0 15px 40px rgba(0,0,0,0.55);
-}
-
-/* Center the founder heading */
-#founder h2 {
-  text-align: center;
-  width: 100%;
 }
 
 .about-photo {
