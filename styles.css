@@ -244,4 +244,46 @@ a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(212,17
   position: relative;
   z-index: 1;
 }
+/* BUY BUTTON */
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #041e18;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
 
+.buy-btn:hover {
+  background: gold;
+  transform: translateY(-2px);
+}
+
+/* PREMIUM CARD EFFECT */
+.flavour-card {
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.flavour-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* GOLD GLOW EFFECT */
+.flavour-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(212,175,55,0.15), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.flavour-card:hover::after {
+  opacity: 1;
+}
