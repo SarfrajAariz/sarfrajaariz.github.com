@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order - AsSip</title>
+<style>
+body {
+  font-family: Arial;
+  background: #062a22;
+  color: white;
+  padding: 40px;
+}
+.box {
+  max-width: 400px;
+  margin: auto;
+  background: #0f2b24;
+  padding: 25px;
+  border-radius: 10px;
+}
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  background: gold;
+  border: none;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Cash on Delivery</h2>
+
+  <p id="product"></p>
+  <p id="price"></p>
+
+  <input placeholder="Your Name">
+  <input placeholder="Address">
+  <input placeholder="Phone Number">
+
+  <button onclick="order()">Place Order</button>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("product").innerText = "Product: " + params.get("product");
+document.getElementById("price").innerText = "Price: ₹" + params.get("price");
+
+function order(){
+  alert("Order placed successfully! We will contact you on WhatsApp.");
+}
+</script>
+
+</body>
+</html>
