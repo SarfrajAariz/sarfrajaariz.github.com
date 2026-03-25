@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AsSip — A Sip of Assam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #041915, #02110d);
+  color: #f4efe6;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* LOGO */
+.logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* BRAND NAME */
+.brand-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.brand-sub {
+  font-size: 16px;
+  color: #cbbf9e;
+  margin-top: -5px;
+}
+
+/* PARAGRAPH */
+.story {
+  margin-top: 40px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+}
+
+/* TAGLINE */
+.tagline {
+  margin-top: 50px;
+  font-style: italic;
+  font-size: 18px;
+  color: #d4af37;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay1 { animation-delay: 0.3s; }
+.delay2 { animation-delay: 0.6s; }
+.delay3 { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img src="logo.jpeg" class="logo fade">
+
+  <!-- BRAND NAME -->
+  <div class="brand-title fade delay1">AsSip</div>
+  <div class="brand-sub fade delay1">a sip of Assam</div>
+
+  <!-- STORY -->
+  <div class="story fade delay2">
+    We are trying our level best to bring this dream into life and place it in front of you — our brand AsSip. 
+    It’s not just a tea brand, it’s something we’ve built with hope, hard work, and a deep connection to our roots. 
+    Every step, every small effort, is a part of this journey to create something meaningful and real. 
+    From selecting the leaves to shaping the identity, we are putting our heart into making AsSip something you can feel, not just drink. 
+    It may be a small beginning, but it carries a big dream — to share a piece of where we belong, one cup at a time.
+  </div>
+
+  <!-- TAGLINE -->
+  <div class="tagline fade delay3">
+    Stay tuned… the story of AsSip is just getting started
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer fade delay3">
+    Crafted with love by Team AsSip
+  </div>
+
+</div>
+
+</body>
+</html>
